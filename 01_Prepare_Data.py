@@ -9,17 +9,6 @@
 
 # COMMAND ----------
 
-# DBTITLE 1,Get Config Info
-# MAGIC %run "./00_Intro_&_Config"
-
-# COMMAND ----------
-
-# DBTITLE 1,Import Required Libraries
-from pyspark.sql.types import *
-import pyspark.sql.functions as fn
-
-# COMMAND ----------
-
 # MAGIC %md ## Step 1: Data Preparation
 # MAGIC
 # MAGIC The data in the Instacart dataset should be uploaded to cloud storage. The cloud storage location should then be [mounted](https://docs.databricks.com/data/databricks-file-system.html#mount-object-storage-to-dbfs) to the Databricks file system as shown here:</p>
@@ -35,6 +24,17 @@ import pyspark.sql.functions as fn
 # COMMAND ----------
 
 # MAGIC %run ./util/data-extract
+
+# COMMAND ----------
+
+# DBTITLE 1,Get Config Info
+# MAGIC %run "./00_Intro_&_Config"
+
+# COMMAND ----------
+
+# DBTITLE 1,Import Required Libraries
+from pyspark.sql.types import *
+import pyspark.sql.functions as fn
 
 # COMMAND ----------
 

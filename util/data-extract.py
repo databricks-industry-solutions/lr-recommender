@@ -3,11 +3,11 @@
 
 # COMMAND ----------
 
-# MAGIC %run ../00_Intro_&_Config
+# MAGIC %pip install kaggle
 
 # COMMAND ----------
 
-# MAGIC %pip install kaggle
+# MAGIC %run ../00_Intro_&_Config
 
 # COMMAND ----------
 

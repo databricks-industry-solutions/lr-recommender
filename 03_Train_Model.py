@@ -426,7 +426,7 @@ with mlflow.start_run(run_name='deployment ready'):
     wrapped_model,
     'model',
     flavor=mlflow.pyfunc,
-    registered_model_name=config['model name'],
+    registered_model_name=config['model_name'],
     training_set=training_set # contains feature store metadata
     )
 
@@ -442,14 +442,14 @@ with mlflow.start_run(run_name='deployment ready'):
 client = mlflow.tracking.MlflowClient()
 
 # identify model version in registry
-latest_model_info = client.search_model_versions(f"name='{config['model name']}'")[0]
+latest_model_info = client.search_model_versions(f"name='{config['model_name']}'")[0]
 model_version = latest_model_info.version
 model_status = latest_model_info.current_stage
 
 # move model to production status and archive existing production versions
 if model_status.lower() != 'production':
   client.transition_model_version_stage(
-    name=config['model name'],
+    name=config['model_name'],
     version=model_version,
     stage='production',
     archive_existing_versions=True
@@ -495,7 +495,7 @@ k = 10
 # get predictions for users
 predictions = (
   fs
-    .score_batch(f"models:/{config['model name']}/production", eval_set) # retrieve features for user-products & score
+    .score_batch(f"models:/{config['model_name']}/production", eval_set) # retrieve features for user-products & score
     .select('user_id','product_id','prediction') # get ids and prediction (probability)
     .withColumn('product_rank', fn.expr('row_number() over(partition by user_id order by prediction desc)')) # rank products based on probabilities
     .filter(f'product_rank <= {k}') # limit to k products
