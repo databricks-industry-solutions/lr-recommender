@@ -1,5 +1,5 @@
 # Databricks notebook source
-# MAGIC %md The purpose of this notebook is to deploy the classifier recommender for real-time inference.  This notebook was developed on a **Databricks ML 12.2** cluster.
+# MAGIC %md The purpose of this notebook is to deploy the classifier recommender for real-time inference. You may find this notebook at https://github.com/databricks-industry-solutions/lr-recommender.
 
 # COMMAND ----------
 
@@ -12,7 +12,7 @@
 # COMMAND ----------
 
 # DBTITLE 1,Get Config Settings
-# MAGIC %run "./00_Intro_&_Config"
+# MAGIC %run "./00_Intro_and_Config"
 
 # COMMAND ----------
 

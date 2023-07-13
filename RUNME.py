@@ -84,7 +84,7 @@ job_json = {
             {
                 "job_cluster_key": "lr_rec_cluster",
                 "notebook_task": {
-                    "notebook_path": f"00_Intro_&_Config"
+                    "notebook_path": f"00_Intro_and_Config"
                 },
                 "task_key": "lr_rec_00"
             },

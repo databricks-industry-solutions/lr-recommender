@@ -7,7 +7,7 @@
 
 # COMMAND ----------
 
-# MAGIC %run ../00_Intro_&_Config
+# MAGIC %run ../00_Intro_and_Config
 
 # COMMAND ----------
 

@@ -1,5 +1,5 @@
 # Databricks notebook source
-# MAGIC %md The purpose of this notebook is to introduce the classification recommender solution accelerator and to provide access to configuration information for the notebooks supporting it.  This notebook was developed on a **Databricks ML 12.2 LTS** cluster.
+# MAGIC %md The purpose of this notebook is to introduce the classification recommender solution accelerator and to provide access to configuration information for the notebooks supporting it. You may find this notebook at https://github.com/databricks-industry-solutions/lr-recommender.
 
 # COMMAND ----------
 
