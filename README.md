@@ -3,27 +3,22 @@
 [![CLOUD](https://img.shields.io/badge/CLOUD-ALL-blue?logo=googlecloud&style=for-the-badge)](https://cloud.google.com/databricks)
 [![POC](https://img.shields.io/badge/POC-10_days-green?style=for-the-badge)](https://databricks.com/try-databricks)
 
-## Business Problem
-<List of the business use case the solution accelerator address>
+## Introduction
 
-## Scope
-<How we expect the user to use this content>
+Recommender systems are becoming increasing important as companies seek better ways to select products to present to end users. In this solution accelerator, we will explore a form of collaborative filter based on binary classification.  In this recommender, we will leverage user and product features to predict product preferences. Predicted preferences will then be used to determine the sequence within which a given set of products are presented to a given user, forming the basis of the recommendation.
 
-___
-<john.doe@databricks.com>
+The recommender model will be deployed for real-time inference using Databricks Model Serving.  To support the rapid retrieval of features based on a supplied set of users and products, a Databricks Online Feature Store will be employed.  Before proceeding with the notebooks in this accelerator, it is recommended you deploy an instance of either AWS DynamoDB or Azure CosmosDB depending on which cloud you are using. (The AWS details are provided [here](https://www.cedarwoodfurniture.com/garden-bench.html) while the Azure details are provided [here](https://learn.microsoft.com/en-us/azure/databricks/machine-learning/feature-store/online-feature-stores).) An additional consideration with Model Serving is that it is not currently available on GCP or within every region supporting Databricks on AWS and Azure.  Before moving forward with these notebooks, please verify you are in a region that supports this feature.  (Details on supported regions for [AWS](https://docs.databricks.com/resources/supported-regions.html#supported-regions-list) and [Azure](https://learn.microsoft.com/en-us/azure/databricks/resources/supported-regions#--supported-regions-list) are found here.)
 
 ___
-
-
-IMAGE TO REFERENCE ARCHITECTURE
+<bryan.smith@databricks.com>
 
 ___
 
-&copy; 2022 Databricks, Inc. All rights reserved. The source in this notebook is provided subject to the Databricks License [https://databricks.com/db-license-source].  All included or referenced third party libraries are subject to the licenses set forth below.
+&copy; 2023 Databricks, Inc. All rights reserved. The source in this notebook is provided subject to the Databricks License [https://databricks.com/db-license-source].  All included or referenced third party libraries are subject to the licenses set forth below.
 
 | library                                | description             | license    | source                                              |
 |----------------------------------------|-------------------------|------------|-----------------------------------------------------|
-| PyYAML                                 | Reading Yaml files      | MIT        | https://github.com/yaml/pyyaml                      |
+| azure-cosmos-spark                                 | Apache Spark Connector for Azure Cosmos DB      | MIT        | https://github.com/Azure/azure-cosmosdb-spark                     |
 
 ## Getting started
 
