@@ -7,7 +7,7 @@ from mlflow.utils.databricks_utils import get_databricks_host_creds
 
 
 # gather other inputs the API needs - they are used as environment variables in the
-serving_host = spark.conf.get("spark.databricks.workspaceUrl")
+serving_host = dbutils.notebook.entry_point.getDbutils().notebook().getContext().apiUrl().getOrElse(None)
 creds = get_databricks_host_creds()
 
 def endpoint_exists(serving_endpoint_name):
