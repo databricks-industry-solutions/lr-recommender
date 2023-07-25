@@ -24,7 +24,7 @@ import pandas as pd
 
 # MAGIC %md ##Step 1: Deploy Model
 # MAGIC
-# MAGIC With our model in production status, we can now deploy it to the Databricks Model Serving infrastructure.  To do this, we need to create a Serving endpoint using [these steps](https://learn.microsoft.com/en-us/azure/databricks/machine-learning/model-serving/create-manage-serving-endpoints). Be sure to configure the Databricks UI for *Machine Learning* (instead of using the default *Data Science & Engineering* configuration) in order to more easily access the *Serving* icon in the sidebar UI.  When selecting your model, be sure to select the instance using the *\__inference* suffix.  Scale the compute per your requirements (though we used a Small configuration with *Scale to zero* deselected for our testing).
+# MAGIC With our model in production status, we can now deploy it to the Databricks Model Serving infrastructure.  To do this, we need to create a Serving endpoint using [these steps](https://learn.microsoft.com/en-us/azure/databricks/machine-learning/model-serving/create-manage-serving-endpoints). Be sure to configure the Databricks UI for *Machine Learning* (instead of using the default *Data Science & Engineering* configuration) in order to more easily access the *Serving* icon in the sidebar UI.  When selecting your model, be sure to select the instance using the *\__inference* suffix.  Scale the compute per your requirements (though we used a Medium configuration with *Scale to zero* deselected for our testing).
 # MAGIC
 # MAGIC Please wait until the endpoint is fully deployed and running before proceeding to the next step:
 # MAGIC </p>
@@ -58,7 +58,7 @@ served_models = [
       "name": config['serving_endpoint_name'],
       "model_name": model_name,
       "model_version": model_version,
-      "workload_size": "Small",
+      "workload_size": "Medium",
       "scale_to_zero_enabled": True
     }
 ]
