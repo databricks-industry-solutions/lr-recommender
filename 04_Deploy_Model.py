@@ -129,6 +129,7 @@ products = (
     .table('product_features')
     .select('product_id')
     .filter("aisle='fresh fruits'")
+    .limit(10)
   )
 
 # assemble lookup keys to score
